@@ -1,0 +1,48 @@
+# ============================================
+# AI DRUG DOCKING - GOOGLE COLAB VERSION
+# ============================================
+# Is code ko Google Colab (colab.research.google.com) par chalao
+
+# STEP 1: AutoDock Vina Install karo
+!pip install vina
+!pip install meeko
+!pip install rdkit
+
+# STEP 2: Protein Download karo (EGFR - Cancer target)
+!wget https://files.rcsb.org/download/1M17.pdb -O protein.pdb
+
+# STEP 3: Ligand (AI Molecule) ready karo
+from rdkit import Chem
+from rdkit.Chem import AllChem
+
+# Apne AI ke Top 5 molecules yahan paste karo
+ai_molecules = [
+    "OS(=O)(=O)NNCCc1ccncc1c1ccccc1Cl",
+    "CN(C)c1ccccc1C(=O)NS(=O)(=O)Nc1ccccc1F",
+    "c1ccncc1C(=O)NCC(C)COCCCC(F)(F)F",
+    "COCc1ccccc1OS(=O)(=O)NCC(C)C(=O)NNCC",
+    "OCc1ccccc1Cl"
+]
+
+print("="*60)
+print("AI DRUG DOCKING STARTING...")
+print("="*60)
+
+for i, smiles in enumerate(ai_molecules, 1):
+    print(f"\n🔬 Docking Molecule #{i}: {smiles}")
+    
+    # Molecule ko 3D structure mein convert karo
+    mol = Chem.MolFromSmiles(smiles)
+    mol = Chem.AddHs(mol)
+    AllChem.EmbedMolecule(mol, randomSeed=42)
+    AllChem.MMFFOptimizeMolecule(mol)
+    
+    # PDB file save karo
+    Chem.MolToPDBFile(mol, f"ligand_{i}.pdb")
+    print(f"   ✅ Molecule prepared: ligand_{i}.pdb")
+
+print("\n" + "="*60)
+print("✅ ALL MOLECULES READY FOR DOCKING!")
+print("="*60)
+print("\n📝 AB DOCKING COMMAND:")
+print("vina --receptor protein.pdb --ligand ligand_1.pdb --center_x 15 --center_y 25 --center_z 15 --size_x 20 --size_y 20 --size_z 20")

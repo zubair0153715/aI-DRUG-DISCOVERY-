@@ -1,0 +1,11 @@
+Rank,SMILES,Binding_Score,MW,LogP
+1,c1ccccc1OOCCOCc1ccncc1CN(C)S(=O)(=O)N,7,367.43,1.24
+2,NCCc1ccncc1NCC(=O)C(=O)Nc1ccccc1Cl,7,332.79,1.86
+3,C(=O)NCC(C)OCCC(=O)c1ccncc1C(F)(F)F,7,304.27,1.82
+4,c1ccccc1Oc1ccncc1S(=O)(=O)NOCC(=O)N,7,323.33,0.57
+5,c1ccccc1CCCN(C)NCCc1ccccc1OCN(C),7,327.47,2.85
+6,S(=O)(=O)NCC(C)S(=O)(=O)NCCCc1ccccc1Cl,7,354.88,0.70
+7,OC(=O)OC(=O)NCCc1ccncc1c1ccccc1F,7,304.28,2.83
+8,C(=O)OCOCC(=O)ONc1ccccc1Oc1ccccc1F,6,335.29,2.64
+9,Oc1ccccc1OCC(=O)S(=O)(=O)NC(=O)OC(=O)O,6,319.25,0.03
+10,NCCc1ccncc1CC(=O)c1ccccc1,5,240.31,2.01
