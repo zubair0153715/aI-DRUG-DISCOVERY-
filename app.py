@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import random
 from rdkit import Chem
-from rdkit.Chem import Descriptors, Draw
+from rdkit.Chem import Descriptors
 from rdkit import RDLogger
 RDLogger.DisableLog('rdApp.*')
 
@@ -96,8 +96,8 @@ if st.button("🚀 Drug Discovery Shuru Karo", type="primary"):
     status.text("🧪 ADMET Prediction...")
     for r in results:
         mol = Chem.MolFromSmiles(r["smiles"])
-        r["lipinski"] = "✅ PASS" if (r["mw"] < 500 and r["logp"] < 5) else "❌ FAIL"
-        r["solubility"] = "✅ GOOD" if r["logp"] < 3 else "⚠️ POOR"
+        r["lipinski"] = "PASS" if (r["mw"] < 500 and r["logp"] < 5) else "FAIL"
+        r["solubility"] = "GOOD" if r["logp"] < 3 else "POOR"
     progress.progress(75)
     
     # Step 4: Report
@@ -123,10 +123,8 @@ if st.button("🚀 Drug Discovery Shuru Karo", type="primary"):
     **Lipinski:** {best['lipinski']} | **Solubility:** {best['solubility']}
     """)
     
-    # Molecule visualization
-    mol = Chem.MolFromSmiles(best["smiles"])
-    img = Draw.MolToImage(mol, size=(300, 200))
-    st.image(img, caption="Best Drug Candidate Structure")
+    # SMILES display
+    st.code(best["smiles"], language="text")
     
     # Download button
     csv = df.to_csv(index=False)
