@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-08-22 16:46:23",
+  "disease": "Cancer",
+  "candidates": [
+    {
+      "smiles": "N1CCOCC1c1ccncc1N1CCOCC1COCCOCN(C)",
+      "binding": -9.43,
+      "stability": 92.8,
+      "rmsd": 2.77,
+      "h_bonds": 6,
+      "verdict": "STABLE"
+    },
+    {
+      "smiles": "CC(C)c1ccc(O)cc1c1cnc[nH]1",
+      "binding": -9.32,
+      "stability": 96.5,
+      "rmsd": 0.83,
+      "h_bonds": 7,
+      "verdict": "STABLE"
+    },
+    {
+      "smiles": "CCOc1ccc(C)cc1c1ccc(C)cc1",
+      "binding": -9.2,
+      "stability": 79.1,
+      "rmsd": 2.42,
+      "h_bonds": 2,
+      "verdict": "STABLE"
+    },
+    {
+      "smiles": "C(=O)NCOCCCOCC(C)",
+      "binding": -9.06,
+      "stability": 82.2,
+      "rmsd": 1.54,
+      "h_bonds": 7,
+      "verdict": "STABLE"
+    },
+    {
+      "smiles": "c1cc[nH]c1CN(C)CCOC(=O)N",
+      "binding": -8.97,
+      "stability": 71.3,
+      "rmsd": 1.01,
+      "h_bonds": 1,
+      "verdict": "MODERATE"
+    }
+  ]
+}
