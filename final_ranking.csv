@@ -1,0 +1,11 @@
+smiles,binding,logp,dili,solubility,drug_score
+c1ccncc1OCCOOCCOC(=O)NCl,-8.78,1.29,SAFE,GOOD,95
+CC(C)c1ccncc1COCCOC(=O)NCOC,-8.63,2.05,SAFE,GOOD,95
+c1ccncc1CC(C)OCCO,-8.98,1.02,SAFE,GOOD,92
+FCOCCOCCOF,-8.79,0.85,SAFE,GOOD,92
+CC(C)S(=O)(=O)Nc1ccccc1CN(C),-8.37,1.56,SAFE,GOOD,90
+C(=O)Nc1ccoc1CC(=O)CC(=O)c1ccncc1,-8.2,1.63,SAFE,GOOD,90
+c1ccoc1c1ccccc1C(=O)O,-8.03,2.64,SAFE,GOOD,87
+c1ccncc1C(=O)OC(=O)OCOC,-8.64,0.98,RISK,GOOD,85
+CN(C)c1ccncc1c1ccc(O)cc1,-8.37,2.52,RISK,GOOD,80
+c1ccc(Cl)cc1CN(C)c1ccoc1CC(C),-8.91,4.52,SAFE,POOR,78
