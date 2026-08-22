@@ -1,0 +1,4 @@
+smiles,avg_rmsd,final_rmsd,avg_rmsf,h_bond_frames,avg_h_bonds,stability
+c1ccncc1CC(C)OCCO,1.68,1.3,1.36,58%,4.8,🟡 MODERATELY STABLE
+FCOCCOCCOF,2.22,1.82,1.49,76%,2.2,🟡 MODERATELY STABLE
+c1ccncc1OCCOOCCOC(=O)NCl,2.25,2.02,1.62,54%,3.7,🟡 MODERATELY STABLE
